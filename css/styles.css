@@ -369,6 +369,7 @@ header h1 {
   border-radius: 8px;
   background-color: #fff;
   font-size: 0.8em;
+  cursor: pointer;
 }
 
 .employee h2 {
@@ -400,14 +401,32 @@ header h1 {
   margin: auto 0;
 }
 
+.text-container h2 {
+  font-size: 1.08em;
+  color: #444;
+}
+
+.text-container p {
+  font-size: 0.7em;
+  color: #888;
+  font-weight: normal;
+}
+
+.text-container hr {
+  margin: 25px 10px;
+}
+
 .overlay {
-  display: none;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background: rgba(25, 25, 25, 0.5);
+}
+
+.hidden {
+  display: none;
 }
 
 .modal {
@@ -434,21 +453,6 @@ header h1 {
 
 .modal-content img {
   border-radius: 50%;
-}
-
-.text-container h2 {
-  font-size: 1.08em;
-  color: #444;
-}
-
-.text-container p {
-  font-size: 0.7em;
-  color: #888;
-  font-weight: normal;
-}
-
-.text-container hr {
-  margin: 25px 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

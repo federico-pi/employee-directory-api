@@ -1,0 +1,38 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(25, 25, 25, 0.5);
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  width: 375px;
+  margin: 15% auto auto;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 30px 20px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 7px;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  color: #555;
+  font-size: 1.2em;
+}
+
+.modal-content img {
+  border-radius: 50%;
+}
