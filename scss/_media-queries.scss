@@ -1,0 +1,28 @@
+@media (min-width: 768px) {
+  body {
+    padding: 32px 25px 45px;
+  }
+
+  .top-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .top-container input {
+    align-self: auto;
+  }
+
+  #search {
+    margin: auto 0;
+  }
+
+  .top-container h1 {
+    text-align: left;
+    font-size: 1.1em;
+    margin: auto 0;
+  }
+
+  .employees-container {
+    gap: 23px;
+  }
+}

@@ -4,7 +4,7 @@
 }
 
 body {
-  padding: 35px 25px 45px;
+  padding: 35px 15px 45px;
   background-color: #FCFCFC;
   min-height: 100vh;
   position: relative;
@@ -12,14 +12,18 @@ body {
 
 .top-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 23px;
+}
+
+.top-container input {
+  align-self: center;
 }
 
 #search {
   height: 38px;
   padding: 0 10px;
-  margin: auto 0;
+  margin: auto 0 10px;
   border-radius: 8px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -28,18 +32,19 @@ body {
   font-size: 0.9em;
 }
 
-header h1 {
+.top-container h1 {
+  text-align: center;
   font-weight: normal;
   color: #444;
   margin-bottom: 1.7em;
-  font-size: 1.1em;
-  margin: auto 0;
+  font-size: 0.95em;
+  margin: auto 0 15px;
 }
 
 .employees-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 25px;
+  gap: 1em;
 }
 
 .employee {

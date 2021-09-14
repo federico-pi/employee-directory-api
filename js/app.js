@@ -70,16 +70,38 @@ modalClose.addEventListener('click', () => {
   overlay.classList.add("hidden");
 });
 
+let employeeName = document.getElementsByClassName('name');
+
 function searchEmployees() {
   let input = document.getElementById('search').value;
   input = input.toLowerCase();
-  let x = document.getElementsByClassName('name');
-  for (let i=0; i<x.length; i++) {
-    if (x[i].innerHTML.toLowerCase().includes(input)) {
-        x[i].parentNode.parentNode.style.display="flex";
+  for (let i=0; i<employeeName.length; i++) {
+    if (employeeName[i].innerHTML.toLowerCase().includes(input)) {
+        employeeName[i].parentNode.parentNode.style.display="flex";
       }
       else {
-        x[i].parentNode.parentNode.style.display="none";
+        employeeName[i].parentNode.parentNode.style.display="none";
       }
   }
 }
+
+const modal = document.getElementById('modal');
+
+modal.addEventListener('click', (e) => {
+  if (e.target.classList.contains('right-arrow')) {
+    for (let i=0; i<12; i++) {
+      if (employeeName[i].innerText.toLowerCase() === document.querySelector('.text-container').children[0].innerText.toLowerCase()) {
+        let nextEmployee = employeeName[i+1];
+        console.log(nextEmployee.innerText)
+      }
+    };
+  }
+  if (e.target.classList.contains('left-arrow')) {
+    for (let i=0; i<12; i++) {
+      if (employeeName[i].innerText.toLowerCase() === document.querySelector('.text-container').children[0].innerText.toLowerCase()) {
+        let previousEmployee = employeeName[i-1];
+        console.log(previousEmployee.innerText)
+      }
+    };
+  }
+});

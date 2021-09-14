@@ -9,23 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="js/app.js" defer></script>
   </head>
 
   <body>
     <header>
       <div class="top-container">
-      <h1>AWESOME STARTUP EMPLOYEE DIRECTORY</h1>
-      <!-- <datalist id="users">
-        <option value="Wilson Andrews">
-        <option value="Sarah Brown">
-        <option value="Victoria Duncan">
-        <option value="Daniel Powell">
-        <option value="Jaylynn Clayton">
-        <option value="Josh Cox">
-        <option value="Terrell Conner">
-        <option value="Chelsea Fletcher">
-      </datalist> -->
-      <input id="search" type="text" onkeyup="searchEmployees()" placeholder="Enter a name or username">
+        <h1>AWESOME STARTUP EMPLOYEE DIRECTORY</h1>
+        <input id="search" type="text" onkeyup="searchEmployees()" placeholder="Enter a name or username">
       </div>
     </header>
     <main class="employees-container">
@@ -151,8 +142,20 @@
         </div> -->
     </main>
     <div class="overlay hidden">
-      <div class="modal">
+      <div class="modal" id="modal">
         <button class="modal-close">x</button>
+        <svg class="right-arrow" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <g data-name="right-arrow" id="right-arrow">
+            <path class="ra1" d="M16.47,16.88,26.34,7a1,1,0,0,0-1.41-1.41l-9.06,9.06-8.8-8.8a1,1,0,0,0-1.41,0h0a1,1,0,0,0,0,1.42l9.61,9.61A.85.85,0,0,0,16.47,16.88Z"/>
+            <path class="ra2" d="M16.47,26.46l9.87-9.88a1,1,0,0,0-1.41-1.41l-9.06,9.06-8.8-8.8a1,1,0,0,0-1.41,0h0a1,1,0,0,0,0,1.41l9.61,9.62A.85.85,0,0,0,16.47,26.46Z"/>
+          </g>
+        </svg>
+        <svg class="left-arrow" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <g data-name="left-arrow" id="left-arrow">
+            <path class="ra1" d="M16.47,16.88,26.34,7a1,1,0,0,0-1.41-1.41l-9.06,9.06-8.8-8.8a1,1,0,0,0-1.41,0h0a1,1,0,0,0,0,1.42l9.61,9.61A.85.85,0,0,0,16.47,16.88Z"/>
+            <path class="ra2" d="M16.47,26.46l9.87-9.88a1,1,0,0,0-1.41-1.41l-9.06,9.06-8.8-8.8a1,1,0,0,0-1.41,0h0a1,1,0,0,0,0,1.41l9.61,9.62A.85.85,0,0,0,16.47,26.46Z"/>
+          </g>
+        </svg>
         <div class="modal-content">
           <img class="avatar" src="images/employee.jpg">
           <div class="text-container">
@@ -161,12 +164,11 @@
             <p class="address">Riccione</p>
             <hr>
             <p>(593) 364-3249</p>
-            <p class="address">Viale Ionio 4, Riccione (RN), 47838</p>
+            <p class="address">Viale Ionio 4, Italy, 47838</p>
             <p>Birthday: 07/04/96</p> -->
           </div>
         </div>
       </div>
     </div>
-    <script src="js/app.js"></script>
   </body>
 </html>

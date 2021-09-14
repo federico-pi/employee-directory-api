@@ -13,6 +13,7 @@
 
 .modal {
   width: 375px;
+  height: 410px;
   margin: 15% auto auto;
   position: relative;
   text-align: center;
@@ -35,4 +36,45 @@
 
 .modal-content img {
   border-radius: 50%;
+}
+
+.text-container hr {
+  width: 265px;
+  margin: 25px auto;
+}
+
+.right-arrow, .left-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 257px;
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.right-arrow:hover, .left-arrow:hover {
+  transition-duration: 0.5s;
+  background-color: grey;
+}
+
+.right-arrow {
+  transform: rotate(-90deg);
+  right: 14px;
+  top: 257px;
+}
+
+.left-arrow {
+  transform: rotate(90deg);
+  left: 14px;
+  top: 257px;
+}
+
+.ra1, .ra2 {
+  fill: #999;
+  transform: scale(0.8);
+  transform-origin: 50% 50%;
+}
+
+.right-arrow:hover .ra1, .right-arrow:hover .ra2, .left-arrow:hover .ra1, .left-arrow:hover .ra2 {
+  transition-duration: 0.5s;
+  fill: white;
 }
