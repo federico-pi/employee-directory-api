@@ -9,12 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
-    <script src="js/app.js" defer></script>
   </head>
 
   <body>
     <header>
+      <div class="top-container">
       <h1>AWESOME STARTUP EMPLOYEE DIRECTORY</h1>
+      <!-- <datalist id="users">
+        <option value="Wilson Andrews">
+        <option value="Sarah Brown">
+        <option value="Victoria Duncan">
+        <option value="Daniel Powell">
+        <option value="Jaylynn Clayton">
+        <option value="Josh Cox">
+        <option value="Terrell Conner">
+        <option value="Chelsea Fletcher">
+      </datalist> -->
+      <input id="search" type="text" onkeyup="searchEmployees()" placeholder="Enter a name or username">
+      </div>
     </header>
     <main class="employees-container">
         <!-- <div class="employee">
@@ -155,5 +167,6 @@
         </div>
       </div>
     </div>
+    <script src="js/app.js"></script>
   </body>
 </html>

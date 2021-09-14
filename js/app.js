@@ -6,10 +6,10 @@ const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
 
 fetch(urlAPI)
-.then(res => res.json())
-.then(res => res.results)
-.then(displayEmployees)
-.catch(err => console.log(err))
+  .then(res => res.json())
+  .then(res => res.results)
+  .then(displayEmployees)
+  .catch(err => console.log(err))
 
 function displayEmployees(employeeData) {
   employees = employeeData
@@ -69,3 +69,17 @@ gridContainer.addEventListener('click', e => {
 modalClose.addEventListener('click', () => {
   overlay.classList.add("hidden");
 });
+
+function searchEmployees() {
+  let input = document.getElementById('search').value;
+  input = input.toLowerCase();
+  let x = document.getElementsByClassName('name');
+  for (let i=0; i<x.length; i++) {
+    if (x[i].innerHTML.toLowerCase().includes(input)) {
+        x[i].parentNode.parentNode.style.display="flex";
+      }
+      else {
+        x[i].parentNode.parentNode.style.display="none";
+      }
+  }
+}
