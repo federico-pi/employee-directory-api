@@ -4,6 +4,7 @@ const gridContainer = document.querySelector(".employees-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
 const modalClose = document.querySelector(".modal-close");
+const modal = document.getElementById('modal');
 
 fetch(urlAPI)
   .then(res => res.json())
@@ -59,6 +60,7 @@ function displayModal(index) {
 }
 
 gridContainer.addEventListener('click', e => {
+  modal.classList.add('popup')
   clearSearch();
   if (e.target !== gridContainer) {
     const employee = e.target.closest(".employee");
@@ -86,8 +88,6 @@ function searchEmployees() {
   }
 }
 
-const modal = document.getElementById('modal');
-
 function clearSearch() {
    document.getElementById('search').value = '';
    for (let i=0; i<employeeName.length; i++) {
@@ -101,8 +101,12 @@ modal.addEventListener('click', (e) => {
     for (let i=0; i<12; i++) {
       if (employeeName[i].innerText.toLowerCase() === document.querySelector('.text-container').children[0].innerText.toLowerCase()) {
         z = employeeName[i].parentNode.parentNode.getAttribute('data-index');
-        z++;
-        return displayModal(z)
+        if (z === 11) {
+          return null
+        } else {
+          z++;
+          return displayModal(z)
+        }
       }
     };
   }
@@ -111,8 +115,12 @@ modal.addEventListener('click', (e) => {
     for (let i=0; i<12; i++) {
       if (employeeName[i].innerText.toLowerCase() === document.querySelector('.text-container').children[0].innerText.toLowerCase()) {
         z = employeeName[i].parentNode.parentNode.getAttribute('data-index');
-        z--;
-        return displayModal(z)
+        if (z === 0) {
+          return null
+        } else {
+          z--;
+          return displayModal(z)
+        }
       }
     };
   }
