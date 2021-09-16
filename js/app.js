@@ -59,6 +59,7 @@ function displayModal(index) {
 }
 
 gridContainer.addEventListener('click', e => {
+  clearSearch();
   if (e.target !== gridContainer) {
     const employee = e.target.closest(".employee");
     const index = employee.getAttribute('data-index');
@@ -86,6 +87,13 @@ function searchEmployees() {
 }
 
 const modal = document.getElementById('modal');
+
+function clearSearch() {
+   document.getElementById('search').value = '';
+   for (let i=0; i<employeeName.length; i++) {
+     employeeName[i].parentNode.parentNode.style.display="flex";
+   }
+}
 
 modal.addEventListener('click', (e) => {
   if (e.target.classList.contains('right-arrow')) {
