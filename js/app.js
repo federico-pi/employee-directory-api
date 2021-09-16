@@ -27,7 +27,7 @@ function displayEmployees(employeeData) {
           <img class="avatar" src="${picture.large}" />
         </div>
         <div class="employee-info">
-          <h2 class="name">${name.first} ${name.last}</h2>
+          <h2 class="name target">${name.first} ${name.last}</h2>
           <p class="email">${email}</p>
           <p class="address">${city}</p>
         </div>
@@ -70,17 +70,17 @@ modalClose.addEventListener('click', () => {
   overlay.classList.add("hidden");
 });
 
-let employeeName = document.getElementsByClassName('name');
+let employeeName = document.getElementsByClassName('target');
 
 function searchEmployees() {
   let input = document.getElementById('search').value;
   input = input.toLowerCase();
   for (let i=0; i<employeeName.length; i++) {
-    if (employeeName[i].innerHTML.toLowerCase().includes(input)) {
-        employeeName[i].parentNode.parentNode.style.display="flex";
+    if (!employeeName[i].innerHTML.toLowerCase().includes(input)) {
+        employeeName[i].parentNode.parentNode.style.display="none";
       }
       else {
-        employeeName[i].parentNode.parentNode.style.display="none";
+        employeeName[i].parentNode.parentNode.style.display="flex";
       }
   }
 }
@@ -89,18 +89,22 @@ const modal = document.getElementById('modal');
 
 modal.addEventListener('click', (e) => {
   if (e.target.classList.contains('right-arrow')) {
+    let z = null
     for (let i=0; i<12; i++) {
       if (employeeName[i].innerText.toLowerCase() === document.querySelector('.text-container').children[0].innerText.toLowerCase()) {
-        let nextEmployee = employeeName[i+1];
-        console.log(nextEmployee.innerText)
+        z = employeeName[i].parentNode.parentNode.getAttribute('data-index');
+        z++;
+        return displayModal(z)
       }
     };
   }
   if (e.target.classList.contains('left-arrow')) {
+    let z = null
     for (let i=0; i<12; i++) {
       if (employeeName[i].innerText.toLowerCase() === document.querySelector('.text-container').children[0].innerText.toLowerCase()) {
-        let previousEmployee = employeeName[i-1];
-        console.log(previousEmployee.innerText)
+        z = employeeName[i].parentNode.parentNode.getAttribute('data-index');
+        z--;
+        return displayModal(z)
       }
     };
   }
