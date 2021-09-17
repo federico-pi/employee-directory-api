@@ -1,2 +1,4 @@
-# Use an API to create an employee directory
-Requested a JSON object from an API using fetch and parsed the data of 12 random employees to display their information in a grid.
+# Use Fetch API to create an employee directory
+Parsed JSON data from an API to display 12 random employees and their information.
+
+This is my 8th project of the Treehouse techdegree.
